@@ -9,7 +9,7 @@
   "DomesticDNSIP": "77.88.8.8",
   "Geoipurl": "https://raw.githubusercontent.com/vorpalu/happ-routing/main/geoip.dat",
   "Geositeurl": "https://raw.githubusercontent.com/vorpalu/happ-routing/main/geosite.dat",
-  "LastUpdated": "1789470979",
+  "LastUpdated": "1789471356",
   "DnsHosts": {},
   "DirectSites": [
     "geosite:ru",
