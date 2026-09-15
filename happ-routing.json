@@ -1,0 +1,46 @@
+{
+  "Name": "RU DIRECT Lite",
+  "GlobalProxy": "true",
+  "RemoteDNSType": "DoH",
+  "RemoteDNSDomain": "https://1.1.1.1/dns-query",
+  "RemoteDNSIP": "1.1.1.1",
+  "DomesticDNSType": "DoH",
+  "DomesticDNSDomain": "https://77.88.8.8/dns-query",
+  "DomesticDNSIP": "77.88.8.8",
+  "Geoipurl": "https://raw.githubusercontent.com/vorpalu/happ-routing/main/geoip.dat",
+  "Geositeurl": "https://raw.githubusercontent.com/vorpalu/happ-routing/main/geosite.dat",
+  "LastUpdated": "1789470979",
+  "DnsHosts": {},
+  "DirectSites": [
+    "geosite:ru",
+    "geosite:apple",
+    "geosite:games",
+    "geosite:trackers"
+  ],
+  "DirectIp": [
+    "0.0.0.0/8",
+    "10.0.0.0/8",
+    "100.64.0.0/10",
+    "127.0.0.0/8",
+    "169.254.0.0/16",
+    "172.16.0.0/12",
+    "192.168.0.0/16",
+    "224.0.0.0/3",
+    "::1/128",
+    "fc00::/7",
+    "fe80::/10",
+    "ff00::/8",
+    "geoip:ru"
+  ],
+  "ProxySites": [
+    "geosite:games-proxy"
+  ],
+  "ProxyIp": [],
+  "BlockSites": [
+    "geosite:ads"
+  ],
+  "BlockIp": [],
+  "DomainStrategy": "IPIfNonMatch",
+  "FakeDNS": "false",
+  "UseChunkFiles": "true"
+}

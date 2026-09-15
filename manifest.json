@@ -1,0 +1,68 @@
+{
+  "sources": {
+    "geosite.dat": {
+      "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
+      "sha256": "dea3de108f7877cb10c253789badb5a3f806d036be96d6b5d81cbe619c60aeb8"
+    },
+    "geoip.dat": {
+      "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat",
+      "sha256": "45325fee1555c8bf04115100694ce8429b88c9bb3b3548abcfd236a1c8ea146f"
+    }
+  },
+  "geosite_categories": {
+    "ru": {
+      "sources": [
+        "category-ru"
+      ],
+      "entries": 1009
+    },
+    "apple": {
+      "sources": [
+        "apple"
+      ],
+      "entries": 1585
+    },
+    "games": {
+      "sources": [
+        "steam",
+        "category-games",
+        "category-game-platforms-download"
+      ],
+      "entries": 1078
+    },
+    "games-proxy": {
+      "sources": [
+        "ubisoft",
+        "blizzard"
+      ],
+      "entries": 59
+    },
+    "trackers": {
+      "sources": [
+        "category-public-tracker"
+      ],
+      "entries": 431
+    },
+    "ads": {
+      "sources": [
+        "category-ads-all"
+      ],
+      "entries": 908
+    }
+  },
+  "geoip_ru_entries": 25156,
+  "files": {
+    "geosite.dat": {
+      "bytes": 110192,
+      "sha256": "58429276319960542f2aaba5e477f86962b60a86344ca67e0ba92a15ac40a530"
+    },
+    "geoip.dat": {
+      "bytes": 397536,
+      "sha256": "2a5dd1843c830abdf592c77cb6da30f2830d0218a134ee794acd447dcbf7963c"
+    },
+    "xray-json.json": {
+      "bytes": 3357,
+      "sha256": "b5cc90980606297b02cd0be94cb3fe18d23241ce26938e0ea1a914c907dc188d"
+    }
+  }
+}

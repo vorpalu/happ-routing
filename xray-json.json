@@ -1,0 +1,175 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "queryStrategy": "UseIPv4",
+    "tag": "dns-internal",
+    "disableFallbackIfMatch": true,
+    "servers": [
+      {
+        "address": "localhost",
+        "domains": [
+          "domain:localhost",
+          "domain:lan",
+          "domain:local",
+          "domain:home.arpa"
+        ],
+        "skipFallback": true
+      },
+      {
+        "address": "https://1.1.1.1/dns-query",
+        "domains": [
+          "geosite:games-proxy"
+        ]
+      },
+      {
+        "address": "https+local://77.88.8.8/dns-query",
+        "domains": [
+          "geosite:ru",
+          "geosite:apple",
+          "geosite:games",
+          "geosite:trackers"
+        ],
+        "skipFallback": true
+      },
+      "https://8.8.8.8/dns-query"
+    ]
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "dns-internal"
+        ],
+        "outboundTag": "proxy"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "domain:localhost",
+          "domain:lan",
+          "domain:local",
+          "domain:home.arpa"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:ads"
+        ],
+        "outboundTag": "block"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:games-proxy"
+        ],
+        "outboundTag": "proxy"
+      },
+      {
+        "type": "field",
+        "protocol": [
+          "bittorrent"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:trackers"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:apple"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:games"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:ru"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "0.0.0.0/8",
+          "10.0.0.0/8",
+          "100.64.0.0/10",
+          "127.0.0.0/8",
+          "169.254.0.0/16",
+          "172.16.0.0/12",
+          "192.168.0.0/16",
+          "224.0.0.0/3",
+          "::1/128",
+          "fc00::/7",
+          "fe80::/10",
+          "ff00::/8",
+          "geoip:ru"
+        ],
+        "outboundTag": "direct"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    },
+    {
+      "tag": "http",
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIPv4"
+      }
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole"
+    }
+  ]
+}

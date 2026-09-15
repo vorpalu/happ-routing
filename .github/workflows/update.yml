@@ -1,0 +1,34 @@
+name: Update routing databases
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: routing-databases
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build small databases
+        env:
+          ROUTING_REPOSITORY: ${{ github.repository }}
+          ROUTING_BRANCH: ${{ github.event.repository.default_branch }}
+        run: python3 scripts/build.py --base-url "https://raw.githubusercontent.com/$ROUTING_REPOSITORY/$ROUTING_BRANCH"
+      - name: Publish updated files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add geosite.dat geoip.dat manifest.json happ-routing.json routing-header.txt
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update routing databases'
+            git push
+          fi
