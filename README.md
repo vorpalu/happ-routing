@@ -30,8 +30,8 @@
 
 1. Убедитесь, что `geosite.dat` и `geoip.dat` опубликованы в публичном репозитории и доступны по адресам из `happ-routing.json`. GitHub Pages не требуется.
 2. В шаблон **Xray JSON** вставьте содержимое `xray-json.json`. Remnawave должен добавить выбранный сервер с тегом `proxy` первым в `outbounds`, как в стандартном генераторе. Сам шаблон не содержит VPN-серверов и не предназначен для запуска вне панели.
-3. В выдаваемую Happ подписку добавьте HTTP-заголовок **`routing`**. Его значение — одна полная строка из `routing-header.txt`, начинающаяся с `happ://routing/onadd/`. Это значение, а не отдельный JSON-шаблон и не правило выбора типа ответа.
-4. Если панель позволяет задавать такой заголовок только для ответа Happ, используйте эту настройку. Уже настроенный тип ответа **XRAY_JSON** сохраните. Не заменяйте общий раздел Response Rules содержимым `happ-routing.json`.
+3. В разделе **Response Rules / Правила ответов** найдите существующий объект **Happ Clients** внутри массива `rules` и замените только этот объект содержимым `remnawave-happ-rule.json`. Остальные правила оставьте. Это готовое правило выдачи **XRAY_JSON** с заголовком **`routing`** для Happ. Если правила Happ ещё нет, добавьте его перед Browser Subscription и Fallback Base64.
+4. Не заменяйте весь документ Response Rules одним объектом или файлом `happ-routing.json`. Альтернатива для панели с отдельными настройками заголовков: имя заголовка — `routing`, значение — полная строка из `routing-header.txt`, начинающаяся с `happ://routing/onadd/`. Используйте один из этих способов. Если используются отдельные шаблоны в хостах/сквадах, убедитесь, что Happ получает новый Xray JSON.
 5. Обновите подписку в Happ. Убедитесь, что профиль **RU DIRECT Lite** загрузил обе новые геобазы, затем переподключите VPN. При ошибке загрузки Happ может сохранить прежний профиль, поэтому одно обновление списка серверов не подтверждает смену геобаз.
 
 В `happ-routing.json` перечислены **все** геокатегории из Xray JSON и включено `UseChunkFiles`. Это необходимо для согласованности профиля при оптимизации геобаз. `LastUpdated` записан как UNIX-время. Ссылки на `.mrs` или `.srs` вместо `.dat` не подходят.
@@ -61,5 +61,6 @@ python3 scripts/build.py --base-url https://raw.githubusercontent.com/vorpalu/ha
 - [Happ: JSON-конфигурации и оптимизация геобаз](https://github.com/HappDev/happ_su/blob/main/dev-docs/examples-of-links-and-parameters.md).
 - [Happ: профиль подписки, заголовок routing и обновление геобаз](https://github.com/HappDev/happ_su/blob/main/dev-docs/routing.md).
 - [Remnawave: поля профиля Happ, включая UseChunkFiles](https://github.com/remnawave/utils/blob/main/src/features/happ-routing-builder/model/types.ts).
+- [Remnawave: Response Rules и дополнительные заголовки](https://docs.rw/learn-en/routing-rules/).
 
 В репозитории находятся только правила, открытые геоданные и шаблоны. Адреса VPN-серверов, пользовательские ключи и ссылки на подписки сюда не добавляются.

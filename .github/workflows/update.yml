@@ -27,7 +27,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add geosite.dat geoip.dat manifest.json happ-routing.json routing-header.txt
+          git add geosite.dat geoip.dat manifest.json happ-routing.json routing-header.txt remnawave-happ-rule.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update routing databases'
             git push

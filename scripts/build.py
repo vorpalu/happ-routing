@@ -108,7 +108,20 @@ def main():
     profile['LastUpdated'] = str(int(time.time()))
     profile_path.write_text(json.dumps(profile, ensure_ascii=False, indent=2) + '\n')
     encoded = base64.b64encode(json.dumps(profile, ensure_ascii=False, separators=(',', ':')).encode()).decode()
-    (ROOT / 'routing-header.txt').write_text('happ://routing/onadd/' + encoded + '\n')
+    header = 'happ://routing/onadd/' + encoded
+    (ROOT / 'routing-header.txt').write_text(header + '\n')
+    response_rule = {
+        'name': 'Happ Clients',
+        'description': 'Return Xray JSON and compact routing geodata to Happ',
+        'enabled': True,
+        'operator': 'AND',
+        'conditions': [{'headerName': 'user-agent', 'operator': 'REGEX',
+                        'value': '^Happ(?:/|$)', 'caseSensitive': False}],
+        'responseType': 'XRAY_JSON',
+        'responseModifications': {'headers': [{'key': 'routing', 'value': header}],
+                                  'applyHeadersToEnd': True},
+    }
+    (ROOT / 'remnawave-happ-rule.json').write_text(json.dumps(response_rule, indent=2) + '\n')
     print(json.dumps({'categories': {name: len(data) for name, data in result.items()},
                       'files': {name: value['bytes'] for name, value in manifest['files'].items()}}, indent=2))
 
