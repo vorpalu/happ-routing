@@ -2,11 +2,11 @@
   "sources": {
     "geosite.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-      "sha256": "e8fba6c888d7bf13b4cfcab2b4d3cf7c355a9a2f4d94ee34c9ccfc00730bb389"
+      "sha256": "9e37f1c1e764a1772f5331b69b20f741944b033f0584aec4fc358330e2d869dd"
     },
     "geoip.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat",
-      "sha256": "45325fee1555c8bf04115100694ce8429b88c9bb3b3548abcfd236a1c8ea146f"
+      "sha256": "f3370cf391831bb01e1e662df88596164d136e7d9f81a91c00bae26587e02d72"
     }
   },
   "geosite_categories": {
@@ -50,15 +50,15 @@
       "entries": 908
     }
   },
-  "geoip_ru_entries": 25156,
+  "geoip_ru_entries": 25147,
   "files": {
     "geosite.dat": {
       "bytes": 110192,
       "sha256": "58429276319960542f2aaba5e477f86962b60a86344ca67e0ba92a15ac40a530"
     },
     "geoip.dat": {
-      "bytes": 397536,
-      "sha256": "2a5dd1843c830abdf592c77cb6da30f2830d0218a134ee794acd447dcbf7963c"
+      "bytes": 397350,
+      "sha256": "4a26aa39d5b3570c7868a7bdbafd23e70b0dc7d0bbc09142e5e0f750e9fa162e"
     },
     "xray-json.json": {
       "bytes": 3357,
