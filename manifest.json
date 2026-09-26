@@ -2,7 +2,7 @@
   "sources": {
     "geosite.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-      "sha256": "69763a20940b17dcbe08f15dc76edf2b5406e980c0f58e6f0bb91ff71e933b9d"
+      "sha256": "cf958f4f2611e72f1d4221b2da08a103a5f7aa038a96cc514ec72c7b2a997b3a"
     },
     "geoip.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat",
@@ -14,7 +14,7 @@
       "sources": [
         "category-ru"
       ],
-      "entries": 1009
+      "entries": 1010
     },
     "apple": {
       "sources": [
@@ -53,8 +53,8 @@
   "geoip_ru_entries": 25113,
   "files": {
     "geosite.dat": {
-      "bytes": 110182,
-      "sha256": "ec497debd2e2b5798e3971da374fabc67902bf92ea62224cec4e4df74329c0e0"
+      "bytes": 110198,
+      "sha256": "7e2a9197fbdba6e18abb17adf0d673b08e478f682bf3fb30b429476333f52891"
     },
     "geoip.dat": {
       "bytes": 397022,
