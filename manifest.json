@@ -2,7 +2,7 @@
   "sources": {
     "geosite.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-      "sha256": "bd1804e37ebc09bfe793bd6822d2d49c8d5a668e34fd47112821540dd68645a3"
+      "sha256": "acbf79349cd32b9b95dba8a3918ea778eb07cb9bb662c258b8d353514953b1dd"
     },
     "geoip.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat",
