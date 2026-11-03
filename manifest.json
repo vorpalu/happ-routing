@@ -2,11 +2,11 @@
   "sources": {
     "geosite.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-      "sha256": "7297bf574a563aed8a69528e1f3a2bb275911fb83ebe3082494213d97ab09deb"
+      "sha256": "3fee9b84efce1ef142974a18b48b9b12d2cf8ccb8017dd4ec16e3906bcb7da69"
     },
     "geoip.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat",
-      "sha256": "fbf747a085be25eb61ecac8c27140b4ab0bf8181af6fdb104caa325bd93cf117"
+      "sha256": "06c1d50d0013af57ffe78c5af93f0dc6aa998890f3ee231393816f9117810c4a"
     }
   },
   "geosite_categories": {
@@ -14,7 +14,7 @@
       "sources": [
         "category-ru"
       ],
-      "entries": 1056
+      "entries": 1057
     },
     "apple": {
       "sources": [
@@ -53,8 +53,8 @@
   "geoip_ru_entries": 25157,
   "files": {
     "geosite.dat": {
-      "bytes": 111186,
-      "sha256": "045b0a3195e2c0cbb4358afd0787add80243b1cd0ba62c09439d0e3a4753c61e"
+      "bytes": 111202,
+      "sha256": "f5cd0da0ff9f56dead72586b8a9c116d743521c80511dca329d46c56251a1e55"
     },
     "geoip.dat": {
       "bytes": 397618,
