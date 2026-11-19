@@ -2,11 +2,11 @@
   "sources": {
     "geosite.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-      "sha256": "db0c704c3d2d4705729d49d09ec7347c0ec6304c45c856d5456063d4ac5ef1d7"
+      "sha256": "3ad532e6b868af69bc00fdefac28296acca13c151b2aaf90058b9f41795ae5d7"
     },
     "geoip.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat",
-      "sha256": "304ac8a1cbcc8166e4f5a4f32955e4d0fb77a1bd713583e371b30ee27f3659d8"
+      "sha256": "d4ec4c5e5d5a38c1399964ea9fd8c94288426a3b31b483904b67819fc07f4466"
     }
   },
   "geosite_categories": {
@@ -28,7 +28,7 @@
         "category-games",
         "category-game-platforms-download"
       ],
-      "entries": 1015
+      "entries": 1017
     },
     "games-proxy": {
       "sources": [
@@ -47,18 +47,18 @@
       "sources": [
         "category-ads-all"
       ],
-      "entries": 905
+      "entries": 906
     }
   },
-  "geoip_ru_entries": 25265,
+  "geoip_ru_entries": 25365,
   "files": {
     "geosite.dat": {
-      "bytes": 109860,
-      "sha256": "83e5050e06a9e7ca5897a759bc729cbd32884f3461bef598faca5972f514590f"
+      "bytes": 109907,
+      "sha256": "e6ebc0bbee3286de1bebcc7f951e5849728be9034e0811d9f020d1e2d0858e90"
     },
     "geoip.dat": {
-      "bytes": 398794,
-      "sha256": "72745d626cfec819b36221825bb05c3a27e086a7f48871265411827cc86ff9cb"
+      "bytes": 399722,
+      "sha256": "56dfec2733278f956e6394d5bc0da2a3f89201840512a7563dcbd5ffee3d7ec4"
     },
     "xray-json.json": {
       "bytes": 3357,
