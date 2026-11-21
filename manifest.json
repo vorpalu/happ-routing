@@ -2,7 +2,7 @@
   "sources": {
     "geosite.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-      "sha256": "05383cf8d1086234116d0cff2af6dc595370b6a8c1197814168dc8a527a781d1"
+      "sha256": "55c0ff0bb7a75de661de7a30984ece344d9c7840a37a92893b59af9f4baed280"
     },
     "geoip.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat",
@@ -20,7 +20,7 @@
       "sources": [
         "apple"
       ],
-      "entries": 1584
+      "entries": 1454
     },
     "games": {
       "sources": [
@@ -53,8 +53,8 @@
   "geoip_ru_entries": 25365,
   "files": {
     "geosite.dat": {
-      "bytes": 109907,
-      "sha256": "e6ebc0bbee3286de1bebcc7f951e5849728be9034e0811d9f020d1e2d0858e90"
+      "bytes": 107052,
+      "sha256": "c3e68ab3d2b00d754828a7b75db89fdcf5788f67a177202d80165f1951e11b99"
     },
     "geoip.dat": {
       "bytes": 399722,
