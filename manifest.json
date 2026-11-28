@@ -2,7 +2,7 @@
   "sources": {
     "geosite.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
-      "sha256": "f187c87088838f757c880bcbd4bb172e45697d6a8d08158beb49c7500dc0da1e"
+      "sha256": "a29f0d812db432aa61ccffc8d72fdf8f0b316dea4c95558169dc6c2b021ab6f9"
     },
     "geoip.dat": {
       "url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat",
@@ -28,7 +28,7 @@
         "category-games",
         "category-game-platforms-download"
       ],
-      "entries": 1021
+      "entries": 1022
     },
     "games-proxy": {
       "sources": [
@@ -41,7 +41,7 @@
       "sources": [
         "category-public-tracker"
       ],
-      "entries": 431
+      "entries": 432
     },
     "ads": {
       "sources": [
@@ -53,8 +53,8 @@
   "geoip_ru_entries": 25421,
   "files": {
     "geosite.dat": {
-      "bytes": 107457,
-      "sha256": "0762caa5bebd429a69c39e2710660c595caa8032fcd30472d8e8d5d68af26937"
+      "bytes": 107478,
+      "sha256": "81c16f086bd973495e0f8f13273f7c8be0921cb8702cbf275b4da084b75950db"
     },
     "geoip.dat": {
       "bytes": 400498,
